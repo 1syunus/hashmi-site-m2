@@ -48,13 +48,13 @@ body {
     }
 
     .doc {
-      font-size: 2.5rem;
+      font-size: 3rem;
       z-index: 1;
       opacity: .5;
       color: gray;
     }
 
-    /* h1::before {
+    h1::before {
       content: "Dr.";
       position: absolute;
       font-family: "Lato";
@@ -64,12 +64,12 @@ body {
       font-size: 6rem;
       color: rgba(112, 128, 144, 0.2);
       -webkit-text-stroke: .1px white;
-  } */
+  }
 
   h1::after {
     content: "";
     position: absolute;
-    top: 41%;
+    top: 40%;
     left: 0;
     right: 0;
     height: 2px;
@@ -78,20 +78,20 @@ body {
     z-index: -1;
     clip-path: polygon(
         0% 0%, 
-        calc(11% - 15px) 0%, 
+        calc(11% - 25px) 0%, 
         calc(11% - 25px) 100%, 
         0% 100%, 
         100% 100%, 
         100% 0%, 
         calc(11% + 110px) 0%, 
-        calc(11% + 1200px) 100%, 
+        calc(11% + 110px) 100%, 
         0% 100%
     );
 }
     
     h1 {
         font-family: "Lato", serif;
-        font-size: 2.5rem;
+        font-size: 2rem;
         letter-spacing: .2em;
         color: #4169E1;
         opacity: .9;
@@ -100,7 +100,7 @@ body {
     }
     
     h1 span {
-        /* font-size: 4rem; */
+        font-size: 4rem;
         color: seagreen;
         filter:brightness(1.3);
     
@@ -250,32 +250,10 @@ body {
           font-size: 4rem;
           color: rgba(112, 128, 144, 0.4);
           -webkit-text-stroke: .1px white;
-      } */
+      }
         
-        /* h1::after {
-          display: none;
-        }  */
-
-        .doc {
-          color: #4169E1;
-          opacity: 1;
-        }
-
         h1::after {
-          top: 36%;
-          left: 0;
-          right: 1%;
-          height: 10px;
-          background: linear-gradient(to left, rgba(112, 128, 144, 0.5) 0%, rgba(112, 128, 144, 0) 50%);          box-shadow: 0 0 10px rgba(112, 128, 144, 0.5); 
-          z-index: 1;
-          clip-path: polygon(
-            98% 45%, /* Far-right edge, slightly above midpoint (thicker here) */
-            98% 55%, /* Far-right edge, slightly below midpoint */
-            60% 51%,  /* Middle-left taper, very thin near the midpoint */
-            50% 50%,  /* Midpoint where line fades out and ends */
-            50% 50%,  /* Ensure the line fully closes */
-            100% 45%
-          );
-        }
+          display: none;
+        } */
     }
     
