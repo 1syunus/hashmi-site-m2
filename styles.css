@@ -9,7 +9,7 @@ body {
     min-height: 100vh;
     }
     
-    .container {
+    .columns-container {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -22,7 +22,7 @@ body {
     }
     
     
-    .content {
+    .content-column {
         display: flex;
         flex: 2;
         margin-top: 0;
@@ -38,7 +38,7 @@ body {
         background-position: center;
     }
     
-    .logo-front {
+    .logo {
         z-index: 2;
         width: 9em;
         height: 9em;
@@ -50,8 +50,8 @@ body {
     .doc {
       font-size: 2.5rem;
       z-index: 1;
-      opacity: .5;
-      color: gray;
+      opacity: .9;
+      color: #4169E1;
     }
 
     /* h1::before {
@@ -65,7 +65,17 @@ body {
       color: rgba(112, 128, 144, 0.2);
       -webkit-text-stroke: .1px white;
   } */
-
+      
+  h1 {
+    font-family: "Lato", serif;
+    font-size: 2.5rem;
+    letter-spacing: .2em;
+    color: #4169E1;
+    opacity: .9;
+    z-index: 2;
+    font-weight: 300;
+  }
+  
   h1::after {
     content: "";
     position: absolute;
@@ -88,16 +98,6 @@ body {
         0% 100%
     );
 }
-    
-    h1 {
-        font-family: "Lato", serif;
-        font-size: 2.5rem;
-        letter-spacing: .2em;
-        color: #4169E1;
-        opacity: .9;
-        z-index: 2;
-        font-weight: 300;
-    }
     
     h1 span {
         /* font-size: 4rem; */
@@ -218,12 +218,12 @@ body {
           background-color: #f8f9fa
         }
     
-        .container {
+        .columns-container {
           flex-direction: row;
           min-height: 100vh;
         }
     
-        .img {
+        .img-column {
           flex: 1;
           background-image: url("images/note-med.jpg"); 
           background-position: center;
@@ -232,7 +232,7 @@ body {
           opacity: .9;      
         }
     
-        .content {
+        .content-column {
           flex: 1;
           background-color: whitesmoke;
           background-image: none;
@@ -266,14 +266,15 @@ body {
           left: 0;
           right: 1%;
           height: 10px;
-          background: linear-gradient(to left, rgba(112, 128, 144, 0.5) 0%, rgba(112, 128, 144, 0) 50%);          box-shadow: 0 0 10px rgba(112, 128, 144, 0.5); 
+          background: linear-gradient(to left, rgba(112, 128, 144, 0.5) 0%, rgba(112, 128, 144, 0) 50%);          
+          box-shadow: 0 0 10px rgba(112, 128, 144, 0.5); 
           z-index: 1;
           clip-path: polygon(
-            98% 45%, /* Far-right edge, slightly above midpoint (thicker here) */
-            98% 55%, /* Far-right edge, slightly below midpoint */
-            60% 51%,  /* Middle-left taper, very thin near the midpoint */
-            50% 50%,  /* Midpoint where line fades out and ends */
-            50% 50%,  /* Ensure the line fully closes */
+            98% 45%, 
+            98% 55%, 
+            60% 51%,  
+            50% 50%, 
+            50% 50%,  
             100% 45%
           );
         }
